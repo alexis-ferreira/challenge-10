@@ -22,6 +22,9 @@ let operatorKey = document.getElementsByClassName('operatorKey');
 let egal = document.getElementById('egal');
 // console.log(egal);
 
+let btnReset = document.getElementById('reset');
+// console.log(btnReset);
+
 let number1Stock = "";
 
 let operatorStock = "";
@@ -36,6 +39,16 @@ let result = "";
 
 
 // ---> SCRIPT
+
+btnReset.addEventListener('click', function(){
+
+    number1Stock = "";
+    number2Stock = "";
+
+    result = "";
+
+    screenCalculator.textContent = 0;
+});
 
 
 // NUMBER KEY
