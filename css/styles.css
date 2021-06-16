@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Spartan';
+    src: url(../polices/Spartan/static/Spartan-Bold.ttf)
+}
+
+
+/* ************* GENERAL ************** */
+
+body
+{
+    font-family: 'Spartan', sans-serif;
+
+    padding-top: 20px;
+}
+
+.container-calculator
+{
+    width: 330px;
+    height: 610px;
+}
+
+
+
+
+
+
+/* ************* CALCULATOR ************** */
+
+
+
+
+/* -----> THEME 1 */
+
+body
+{
+    background-color: hsl(222, 26%, 31%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-calculator>.calculator>.header
+{
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.container-calculator>.calculator>.header>.title
+{
+    display: flex;
+    align-items: flex-end;
+}
+
+.container-calculator>.calculator>.header>.title>h1
+{
+    font-size: 30px;
+
+    color: white;
+
+    padding-bottom: 10px;
+}
+
+.container-calculator>.calculator>.header>.theme
+{
+    display: flex;
+
+    color: white;
+}
+
+.container-calculator>.calculator>.header>.theme>.title-theme
+{
+    display: flex;
+    align-items: flex-end;
+
+    height: 40px;
+}
+
+.container-calculator>.calculator>.header>.theme>.title-theme>h3
+{
+    text-transform: uppercase;
+
+    font-size: 13px;
+
+    margin-right: 20px;
+}
+
+.container-calculator>.calculator>.header>.theme>.btnTheme
+{
+    width: 70px;
+    height: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-calculator>.calculator>.header>.theme>.btnTheme>ul
+{
+    display: flex;
+    justify-content: space-between;
+
+    width: 50px;
+
+    font-size: 13px;
+
+    margin-left: 1px;
+}
+
+.container-calculator>.calculator>.header>.theme>.btnTheme>.sliderTheme
+{
+    width: 70px;
+    height: 25px;
+
+    background-color: hsl(223, 31%, 20%);
+
+    border-radius: 50px;
+
+    position: relative;
+}
+
+.container-calculator>.calculator>.header>.theme>.btnTheme>.sliderTheme>.circleSlider
+{
+    width: 17px;
+    height: 17px;
+
+    border-radius: 50px;
+
+    background-color: hsl(6, 63%, 50%);
+
+    position: absolute;
+    top: 4px;
+    left: 5px;
+}
