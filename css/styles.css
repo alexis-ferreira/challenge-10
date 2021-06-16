@@ -29,7 +29,7 @@ body
 
 
 
-/* -------> THEME 1 */
+/* -----------> THEME 1 */
 
 /* --> HEADER  */
 
@@ -183,4 +183,111 @@ body
     font-size: 30px;
 
     margin-bottom: 1px;
+}
+
+
+
+
+/* ---> KEYBOARD  */
+
+.container-calculator>.calculator>.keyboard-calculator
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 420px;
+
+    background-color: hsl(223, 31%, 20%);
+
+    color: hsl(221, 14%, 31%);
+
+    border-radius: 10px;
+}
+
+.container-calculator>.calculator>.keyboard-calculator>.container-keyboard
+{
+    width: 280px;
+    height: 370px;
+}
+
+.container-calculator>.calculator>.keyboard-calculator>.container-keyboard>.keyboard
+{
+    height: 295px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container-calculator>.calculator>.keyboard-calculator>.container-keyboard>.keyboard>.keyboardKey
+{
+    height: 60px;
+    width: 60px;
+
+    background-color: hsl(45, 7%, 89%);
+
+    border-radius: 5px;
+
+    font-size: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 4px 0px hsl(28, 16%, 65%);
+}
+
+.container-calculator>.calculator>.keyboard-calculator>.container-keyboard>.keyboard>.keyboardKey>p
+{
+    margin-top: 8px;
+}
+
+.container-calculator>.calculator>.keyboard-calculator>.container-keyboard>.keyboard>.keyDel
+{
+    color: white;
+
+    font-size: 16px;
+
+    background-color: hsl(225, 21%, 49%);
+
+    box-shadow: 0px 4px 0px hsl(224, 28%, 35%);
+}
+
+.container-calculator>.calculator>.keyboard-calculator>.container-keyboard>.container-keyboard-reset-egal
+{
+    display: flex;
+    justify-content: space-between;
+
+    height: 65px;
+}
+
+.container-calculator>.calculator>.keyboard-calculator>.container-keyboard>.container-keyboard-reset-egal>div
+{
+    height: 60px;
+    width: 133px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+.container-calculator>.calculator>.keyboard-calculator>.container-keyboard>.container-keyboard-reset-egal>#reset
+{
+    background-color: hsl(225, 21%, 49%);
+
+    box-shadow: 0px 4px 0px hsl(224, 28%, 35%);
+
+    border-radius: 5px;
+}
+
+.container-calculator>.calculator>.keyboard-calculator>.container-keyboard>.container-keyboard-reset-egal>#egal
+{
+    background-color: hsl(6, 63%, 50%);
+
+    box-shadow: 0px 4px 0px hsl(6, 70%, 34%);
+
+    border-radius: 5px;
 }
