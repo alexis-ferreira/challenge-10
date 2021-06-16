@@ -44,8 +44,13 @@ btnReset.addEventListener('click', function(){
 
     number1Stock = "";
     number2Stock = "";
+    operatorStock= "";
 
     result = "";
+
+    number1 = false;
+
+    number2 = false;
 
     screenCalculator.textContent = 0;
 });
