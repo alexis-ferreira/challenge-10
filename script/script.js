@@ -39,6 +39,8 @@ console.log("number2 : " + number2);
 
 let result = "";
 
+let multipleCalcul = false;
+
 
 // ---> SCRIPT
 
@@ -55,6 +57,8 @@ btnReset.addEventListener('click', function(){
 
     number2 = false;
     console.log("number2 : " + number2);
+
+    multipleCalcul = false;
     
     screenCalculator.textContent = 0;
 });
@@ -87,6 +91,13 @@ for (let i = 0; i < numberKey.length; i++){
             screenCalculator.textContent = number2Stock;
 
             console.log(number2Stock);
+        } else if (multipleCalcul && number2Stock){
+
+            number2Stock = number2Stock + number[i].textContent;
+
+            screenCalculator.textContent = number2Stock;
+
+            console.log(number2Stock);
         }
     });
 };
@@ -105,7 +116,7 @@ for (let i = 0; i < operatorKey.length; i++){
     
             console.log(operatorStock);
 
-        } else {
+        } else if (number1 == false && number2 == false){
             
             operatorStock = operator[i].textContent;
     
@@ -115,6 +126,82 @@ for (let i = 0; i < operatorKey.length; i++){
     
             number1 = true;
             console.log("number1 : " + number1);
+        } else if (multipleCalcul == false && number2 == false) {
+
+            switch (operatorStock){
+
+                case "+":
+                    result = parseFloat(number1Stock) + parseFloat(number2Stock);
+                    console.log(result);
+                    screenCalculator.textContent = result;
+                    break;
+                
+                case "-":
+                    result = parseFloat(number1Stock) - parseFloat(number2Stock);
+                    console.log(result);
+                    screenCalculator.textContent = result;
+                    break;
+        
+                case "/":
+                    result = parseFloat(number1Stock) / parseFloat(number2Stock);
+                    console.log(result);
+                    screenCalculator.textContent = result;
+                    break;
+        
+                case "x":
+                    result = parseFloat(number1Stock) * parseFloat(number2Stock);
+                    console.log(result);
+                    screenCalculator.textContent = result;
+                    break;
+            }
+
+            operatorStock = operator[i].textContent;
+    
+            console.log(operatorStock);
+
+            multipleCalcul = true;
+            console.log(multipleCalcul);
+
+            number2Stock = "";
+
+        } else if (multipleCalcul){
+
+            switch(operatorStock){
+
+                case "+":
+                    result = parseFloat(result) + parseFloat(number2Stock);
+                    console.log(result);
+                    console.log(number2Stock);
+                    screenCalculator.textContent = result;
+
+                    number2Stock = "";
+                    break;
+                
+                case "-":
+                    result = parseFloat(result) - parseFloat(number2Stock);
+                    console.log(number2Stock);
+                    console.log(result);
+                    screenCalculator.textContent = result;
+
+                    number2Stock = "";
+                    break;
+        
+                case "/":
+                    result = parseFloat(result) / parseFloat(number2Stock);
+                    console.log(result);
+                    screenCalculator.textContent = result;
+
+                    number2Stock = "";
+                    break;
+        
+                case "x":
+                    result = parseFloat(result) * parseFloat(number2Stock);
+                    console.log(result);
+                    screenCalculator.textContent = result;
+
+                    number2Stock = "";
+                    break;
+            }
         }
     });
 };
