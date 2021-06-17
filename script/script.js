@@ -32,8 +32,10 @@ let operatorStock = "";
 let number2Stock = "";
 
 let number1 = false;
+console.log("number1 : " + number1);
 
 let number2 = false;
+console.log("number2 : " + number2);
 
 let result = "";
 
@@ -49,9 +51,11 @@ btnReset.addEventListener('click', function(){
     result = "";
 
     number1 = false;
+    console.log("number1 : " + number1);
 
     number2 = false;
-
+    console.log("number2 : " + number2);
+    
     screenCalculator.textContent = 0;
 });
 
@@ -61,7 +65,7 @@ for (let i = 0; i < numberKey.length; i++){
 
     numberKey[i].addEventListener('click', function(){
 
-        if (number1 == false){
+        if (number1 == false && number2 == false){
 
             number1Stock = number1Stock + number[i].textContent;
 
@@ -69,7 +73,14 @@ for (let i = 0; i < numberKey.length; i++){
     
             console.log(number1Stock);
 
-        } else {
+        } else if (number1) {
+
+            number2Stock = number2Stock + number[i].textContent;
+
+            screenCalculator.textContent = number2Stock;
+
+            console.log(number2Stock);
+        } else if (number1 == false && number2){
 
             number2Stock = number2Stock + number[i].textContent;
 
@@ -84,13 +95,27 @@ for (let i = 0; i < operatorKey.length; i++){
 
     operatorKey[i].addEventListener('click', function(){
 
-        operatorStock = operator[i].textContent;
+        if (number1 == false && number2 == true){
+            
+            number2Stock = "";
 
-        screenCalculator.textContent = operatorStock;
+            operatorStock = operator[i].textContent;
+    
+            screenCalculator.textContent = operatorStock;
+    
+            console.log(operatorStock);
 
-        console.log(operatorStock);
-
-        number1 = true;
+        } else {
+            
+            operatorStock = operator[i].textContent;
+    
+            screenCalculator.textContent = operatorStock;
+    
+            console.log(operatorStock);
+    
+            number1 = true;
+            console.log("number1 : " + number1);
+        }
     });
 };
 
@@ -109,6 +134,7 @@ egal.addEventListener('click', function(){
             
             case "-":
                 result = parseFloat(result) - parseFloat(number2Stock);
+                console.log(number2Stock);
                 console.log(result);
                 screenCalculator.textContent = result;
                 break;
@@ -157,6 +183,8 @@ egal.addEventListener('click', function(){
 
     number1Stock = "";
     number1 = false;
+    console.log("number1 : " + number1);
 
     number2 = true;
+    console.log("number2 : " + number2);
 });
