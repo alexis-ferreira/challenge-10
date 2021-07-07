@@ -1,6 +1,6 @@
 # Frontend Mentor - Calculator app
 
-# Projet en cours
+# Projet non terminé
 
 ![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)
 
